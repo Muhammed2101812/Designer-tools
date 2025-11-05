@@ -77,6 +77,132 @@ export const DynamicToolPages = {
 }
 
 /**
+ * Dynamic imports for heavy tool components
+ * Used within tool pages for further code splitting
+ */
+export const DynamicToolComponents = {
+  // Color Picker components
+  ColorCanvas: dynamic(() => import('@/app/(tools)/color-picker/components/ColorCanvas').then(mod => ({ default: mod.ColorCanvas })), {
+    loading: function LoadingComponent() {
+      return (
+        <div className="flex items-center justify-center h-64 border rounded-lg bg-muted/20">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        </div>
+      )
+    },
+    ssr: false,
+  }),
+  
+  // Image Cropper components
+  CropCanvas: dynamic(() => import('@/app/(tools)/image-cropper/components/CropCanvas').then(mod => ({ default: mod.CropCanvas })), {
+    loading: function LoadingComponent() {
+      return (
+        <div className="flex items-center justify-center h-64 border rounded-lg bg-muted/20">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        </div>
+      )
+    },
+    ssr: false,
+  }),
+  
+  // Image Resizer components
+  ResizeCanvas: dynamic(() => import('@/app/(tools)/image-resizer/components/ResizeCanvas').then(mod => ({ default: mod.ResizeCanvas })), {
+    loading: function LoadingComponent() {
+      return (
+        <div className="flex items-center justify-center h-64 border rounded-lg bg-muted/20">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        </div>
+      )
+    },
+    ssr: false,
+  }),
+  
+  // Format Converter components
+  ConversionPreview: dynamic(() => import('@/app/(tools)/format-converter/components/ConversionPreview'), {
+    loading: function LoadingComponent() {
+      return (
+        <div className="flex items-center justify-center h-64 border rounded-lg bg-muted/20">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        </div>
+      )
+    },
+    ssr: false,
+  }),
+  
+  // QR Generator components
+  QRCanvas: dynamic(() => import('@/app/(tools)/qr-generator/components/QRCanvas'), {
+    loading: function LoadingComponent() {
+      return (
+        <div className="flex items-center justify-center h-64 border rounded-lg bg-muted/20">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        </div>
+      )
+    },
+    ssr: false,
+  }),
+  
+  // Gradient Generator components
+  GradientCanvas: dynamic(() => import('@/app/(tools)/gradient-generator/components/GradientCanvas'), {
+    loading: function LoadingComponent() {
+      return (
+        <div className="flex items-center justify-center h-64 border rounded-lg bg-muted/20">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        </div>
+      )
+    },
+    ssr: false,
+  }),
+  
+  // Image Compressor components
+  CompressionCanvas: dynamic(() => import('@/app/(tools)/image-compressor/components/CompressionCanvas').then(mod => ({ default: mod.CompressionCanvas })), {
+    loading: function LoadingComponent() {
+      return (
+        <div className="flex items-center justify-center h-64 border rounded-lg bg-muted/20">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        </div>
+      )
+    },
+    ssr: false,
+  }),
+  
+  // Background Remover components
+  RemovalPreview: dynamic(() => import('@/app/(tools)/background-remover/components/RemovalPreview').then(mod => ({ default: mod.RemovalPreview })), {
+    loading: function LoadingComponent() {
+      return (
+        <div className="flex items-center justify-center h-64 border rounded-lg bg-muted/20">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        </div>
+      )
+    },
+    ssr: false,
+  }),
+  
+  // Image Upscaler components
+  UpscalePreview: dynamic(() => import('@/app/(tools)/image-upscaler/components/UpscalePreview').then(mod => ({ default: mod.UpscalePreview })), {
+    loading: function LoadingComponent() {
+      return (
+        <div className="flex items-center justify-center h-64 border rounded-lg bg-muted/20">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        </div>
+      )
+    },
+    ssr: false,
+  }),
+  
+  // Mockup Generator components
+  MockupCanvas: dynamic(() => import('@/app/(tools)/mockup-generator/components/MockupCanvas').then(mod => ({ default: mod.MockupCanvas })), {
+    loading: function LoadingComponent() {
+      return (
+        <div className="flex items-center justify-center h-64 border rounded-lg bg-muted/20">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        </div>
+      )
+    },
+    ssr: false,
+  }),
+}
+
+/**
  * Preload a tool page
  * Useful for prefetching when user hovers over tool card
  */

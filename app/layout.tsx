@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+// import { Inter } from 'next/font/google'
 import './globals.css'
 import { Toaster } from '@/components/ui/toaster'
 import { StoreInitializer } from '@/components/providers/StoreInitializer'
@@ -8,7 +8,7 @@ import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 import { PerformanceMonitor } from '@/components/providers/PerformanceMonitor'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Design Kit - Professional Design Tools Suite',
@@ -22,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className="">{/* Temporarily disabled Google Fonts: inter.className */}
         {/* Skip to main content link for keyboard navigation */}
         <a href="#main-content" className="skip-to-main">
           Skip to main content

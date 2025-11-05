@@ -88,13 +88,13 @@ export function getTouchTargetSize(): number {
  * Hook to detect screen size changes
  */
 export function useMediaQuery(query: string): boolean {
-  if (typeof window === 'undefined') return false
-
   const [matches, setMatches] = React.useState(() => {
+    if (typeof window === 'undefined') return false
     return window.matchMedia(query).matches
   })
 
   React.useEffect(() => {
+    if (typeof window === 'undefined') return
     const mediaQuery = window.matchMedia(query)
     const handler = (e: MediaQueryListEvent) => setMatches(e.matches)
 
