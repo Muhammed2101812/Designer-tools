@@ -1,0 +1,18 @@
+{
+  "name": "Design Kit - Professional Design Tools Suite",
+  "short_name": "Design Kit",
+  "description": "Privacy-first browser-based image processing and design tools",
+  "icons": [
+    {
+      "src": "/logo/logo-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#54469F",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}

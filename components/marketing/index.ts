@@ -1,5 +1,0 @@
-export { Hero } from './Hero'
-export { Features } from './Features'
-export { ToolsGrid } from './ToolsGrid'
-export { Pricing } from './Pricing'
-export { CTA } from './CTA'
